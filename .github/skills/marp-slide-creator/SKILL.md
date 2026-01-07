@@ -51,6 +51,15 @@ Marp（Markdown Presentation Ecosystem）は、Markdown 記法でスライドを
 - **Marp 構文ガイド**: [references/guide.md](references/guide.md) を参照
 - **スライドテンプレート**: [references/template.md](references/template.md) を参照
 
+### Mermaid 図の使用
+
+Marp で Mermaid 図（フローチャート、シーケンス図等）を使用する場合、以下の2点が必要です：
+
+1. **JavaScript のロード**: スライドの先頭（フロントマターの直後）に以下のスクリプトを追加
+2. **mermaid クラスの使用**: 図の定義を `<pre class="mermaid">` タグで囲む
+
+詳細は [references/guide.md](references/guide.md) の「Mermaid 図」セクションを参照してください。
+
 ### 出力ファイル
 
 - **ファイル名**: `slides.md` または ユーザー指定のファイル名
