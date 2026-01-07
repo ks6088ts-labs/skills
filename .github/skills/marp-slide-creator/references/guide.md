@@ -332,6 +332,97 @@ style: |
 
 ## 高度な機能
 
+### Mermaid 図
+
+Marp で Mermaid 図（フローチャート、シーケンス図、ER図等）を描画するには、以下の2つの要件を満たす必要があります。
+
+#### 1. JavaScript のロード
+
+スライドの先頭（フロントマターの直後）に以下のスクリプトを追加します：
+
+```html
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad: true
+});
+</script>
+```
+
+#### 2. mermaid クラスでタグを囲む
+
+Mermaid の図定義を `<pre class="mermaid">` タグで囲みます：
+
+```html
+<pre class="mermaid">
+graph LR
+    A[開始] --> B{条件}
+    B -->|Yes| C[処理1]
+    B -->|No| D[処理2]
+    C --> E[終了]
+    D --> E
+</pre>
+```
+
+#### 完全な例
+
+````markdown
+---
+marp: true
+theme: default
+paginate: true
+---
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad: true
+});
+</script>
+
+# タイトルスライド
+
+---
+
+# フローチャート
+
+<pre class="mermaid">
+graph TD
+    A[開始] --> B[処理]
+    B --> C[終了]
+</pre>
+
+---
+
+# シーケンス図
+
+<pre class="mermaid">
+sequenceDiagram
+    Alice->>Bob: Hello Bob!
+    Bob-->>Alice: Hi Alice!
+</pre>
+````
+
+#### サポートされる図の種類
+
+- **フローチャート**: `graph LR` / `graph TD`
+- **シーケンス図**: `sequenceDiagram`
+- **クラス図**: `classDiagram`
+- **状態図**: `stateDiagram-v2`
+- **ER図**: `erDiagram`
+- **ガントチャート**: `gantt`
+- **パイチャート**: `pie`
+- **その他**: [Mermaid 公式ドキュメント](https://mermaid.js.org/) を参照
+
+#### 注意事項
+
+- Mermaid スクリプトは **フロントマターの直後、最初のスライドの前** に1回だけ記述します
+- スクリプトは各スライドに記述する必要はありません
+- HTML エクスポート時に正しく描画されます
+- PDF エクスポート時は HTML 経由でエクスポートすることを推奨
+
+---
+
 ### 見出しによる自動分割
 
 `headingDivider` ディレクティブを使用すると、指定したレベルの見出しで自動的にスライドを分割できます。
@@ -490,3 +581,5 @@ const greeting = () => {
 - [Marpit Framework](https://marpit.marp.app/)
 - [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
 - [Marp CLI](https://github.com/marp-team/marp-cli)
+- [Mermaid 公式サイト](https://mermaid.js.org/)
+- [Mermaid Examples](https://mermaid.js.org/syntax/examples.html)

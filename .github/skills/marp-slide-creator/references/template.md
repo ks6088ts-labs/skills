@@ -187,6 +187,13 @@ style: |
   }
 ---
 
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad: true
+});
+</script>
+
 <!-- _class: lead -->
 
 # 技術タイトル
@@ -230,11 +237,11 @@ def new_approach():
 
 # アーキテクチャ
 
-```mermaid
+<pre class="mermaid">
 graph LR
     Client[Client] --> Server[Server]
     Server --> Database[(Database)]
-```
+</pre>
 
 ---
 
