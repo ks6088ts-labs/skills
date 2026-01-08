@@ -14,6 +14,7 @@ AI エージェント向けのスキル集です。
 | [functional-design-creator](.github/skills/functional-design-creator/SKILL.md) | PRDに基づいて機能設計書を作成するスキル | 「機能設計書を作成して」「PRDから設計書を作って」「functional design を書いて」 |
 | [glossary-creator](.github/skills/glossary-creator/SKILL.md) | プロジェクト固有の用語と技術用語を体系的に定義する用語集を作成するスキル | 「用語集を作成して」「glossary を作って」「用語を定義して」 |
 | [marp-slide-creator](.github/skills/marp-slide-creator/SKILL.md) | Marpを使用してスライド資料のMarkdownファイルを作成するスキル | 「スライドを作成」「Marpでプレゼン資料を作って」「発表用スライドをMarkdownで」 |
+| [marp-slide-reviewer](.github/skills/marp-slide-reviewer/SKILL.md) | Playwright-MCPを使用してMarpスライドを視覚的に検証し、レイアウト問題を自動修正するスキル | 「スライドをレビュー」「Marpスライドの視覚的チェック」「スライドのレイアウトを確認」 |
 | [prd-creator](.github/skills/prd-creator/SKILL.md) | プロダクト要求仕様書（PRD）を作成するスキル | 「PRDを作成」「プロダクト要求仕様書を書いて」「要件定義を作成」 |
 | [press-release-creator](.github/skills/press-release-creator/SKILL.md) | Amazon の Working Backwards 手法に基づいたプレスリリース＋FAQを作成するスキル | 「プレスリリースを作成」「PR/FAQ を書いて」「Working Backwards で企画」 |
 | [reverse-engineering](.github/skills/reverse-engineering/SKILL.md) | ソフトウェアのリバースエンジニアリングレポートを作成するスキル | 「リバースエンジニアリングレポートを作成して」「コードベースを分析して」「プロジェクトの構造を調査して」 |
@@ -30,6 +31,7 @@ AI エージェント向けのスキル集です。
 | architecture-design-creator | `docs/architecture.md` | `docs/prd.md`, `docs/functional-design.md` |
 | glossary-creator | `docs/glossary.md` | なし（PRD等があると効果的） |
 | marp-slide-creator | `docs/slides/*.md` | なし |
+| marp-slide-reviewer | 既存スライドの修正 | Marpスライド、ローカルサーバー |
 | press-release-creator | `docs/press-release.md` | なし |
 | doc-writer | 各種ドキュメント | `docs/prd.md` |
 | agents-md-creator | `AGENTS.md` | なし |
@@ -40,6 +42,7 @@ AI エージェント向けのスキル集です。
 |---------|------|----------|
 | code-review | ソースコード | セキュリティ、正確性、コード品質、テスト、パフォーマンス |
 | doc-review | ドキュメント全般 | 戦略・ビジネス、論理構造、技術的妥当性、リスク管理 |
+| marp-slide-reviewer | Marpスライド | テキストの切れ目・重なり、配置問題、コントラスト、はみ出し |
 | reverse-engineering | 既存ソフトウェア | 外部仕様、内部実装、使用方法、アーキテクチャ分析 |
 
 ### メタスキル
