@@ -1,3 +1,22 @@
+---
+marp: true
+theme: custom
+paginate: true
+title: Reference Slides
+description: Reference Slides
+---
+
+<!-- _class: title　-->
+<!-- _paginate: false -->
+
+![logo w:400px](https://avatars.githubusercontent.com/u/1254960?v=4)
+
+# ${TITLE}
+
+YYYY/MM/DD ks6088ts
+
+---
+
 # References
 
 - [Marp](https://marp.app/)
